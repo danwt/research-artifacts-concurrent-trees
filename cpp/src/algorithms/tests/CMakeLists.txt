@@ -1,7 +1,0 @@
-add_executable(hashmap_rapid hashmap_rapid.cpp)
-add_executable(avl_sequential_standard_rapid avl_sequential_standard_rapid.cpp)
-add_executable(avl_sequential_chunked_recursive_map_based_rapid avl_sequential_chunked_recursive_map_based_rapid.cpp)
-
-target_link_libraries(hashmap_rapid Main)
-target_link_libraries(avl_sequential_standard_rapid Main)
-target_link_libraries(avl_sequential_chunked_recursive_map_based_rapid Main)

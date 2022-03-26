@@ -1,5 +1,0 @@
-*:../src/proto*
-*:../lib*
-missingInclude:*
-unmatchedSuppression:*
-missingIncludeSystem:*

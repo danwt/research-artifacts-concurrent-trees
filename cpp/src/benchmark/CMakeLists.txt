@@ -1,2 +1,0 @@
-add_executable(smoke_benchmark smoke_benchmark.cpp)
-target_link_libraries(smoke_benchmark benchmark::benchmark)
