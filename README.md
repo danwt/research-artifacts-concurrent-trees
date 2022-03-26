@@ -32,5 +32,5 @@ Status : requires tidying and updating models to match latest TLA knowledge.
 
 There are a number of abandoned components of the project. The code is still available at various tagged commits for future reference, if the components should be reintroduced.
 
-- [ ] A C++ implementation of various sequential AVL trees including chunked trees
-- [ ] A web app for visual debugging of TLA+ traces written in Typescript, using React
+- A C++ implementation of various sequential AVL trees including chunked trees
+- A web app for visual debugging of TLA+ traces written in Typescript, using React
