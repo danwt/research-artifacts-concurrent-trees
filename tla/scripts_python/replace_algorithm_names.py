@@ -1,7 +1,7 @@
 from get_all_tla_file_paths import get_all_tla_file_paths
 
 """
-This program replaces all occurrences of the line
+Replaces all occurrences of the line
 
 (* --algorithm <string> {
 

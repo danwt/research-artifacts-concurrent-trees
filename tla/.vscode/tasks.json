@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Erase all translations",
+      "label": "Erase translations",
       "type": "shell",
       "group": "none",
       "command": "python3 scripts_python/erase_all_translations_in_tla_files.py",
@@ -14,13 +14,13 @@
       "command": "python3 scripts_python/replace_module_names.py",
     },
     {
-      "label": "Replace algorithm names with algo",
+      "label": "Replace algorithm names with `algo`",
       "type": "shell",
       "group": "none",
       "command": "python3 scripts_python/replace_algorithm_names.py",
     },
     {
-      "label": "Display label counts of .tla files",
+      "label": "Display label counts in .tla files",
       "type": "shell",
       "group": "none",
       "command": "python3 scripts_python/count_labels_in_tla_files.py",

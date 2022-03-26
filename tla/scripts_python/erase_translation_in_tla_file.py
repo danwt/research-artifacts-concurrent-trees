@@ -1,8 +1,7 @@
 import sys
 
 """
-This program takes a .tla file with a Pluscal translation and overwrites it with the same contents
-except for that the translation is erased.
+Takes a .tla file with a Pluscal translation and overwrites it with the same contents but with translation erased.
 
 Usage:
 command line arg is filename of pluscal spec to erase translation of

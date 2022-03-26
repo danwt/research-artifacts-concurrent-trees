@@ -1,10 +1,10 @@
 from get_all_tla_file_paths import get_all_tla_file_paths
 
 """
-This program reads all non-toolbox .tla files in models/ and prints information
+Reads all non-toolbox .tla files in models/ and prints information
 about the Pluscal labels inside them.
 
-Note: this isn't a general solution. This program only works
+Note: not a general solution. Only works
 for the style of label used in this project, meaning labels which:
 1. Are on their own line
 2. Have no indentation
@@ -53,15 +53,9 @@ def label_info(lines_of_tla_file):
             return False
 
         return True
-
-    def is_special_case(s):
-        compare = {"DROPIN:", "NOTE:", "TODO:"}
-        return s in compare
-        
             
     pluscal_lines = inside_pluscal(lines_of_tla_file)
     label_lines = [l for l in pluscal_lines if is_label(l)]
-    excluding_special_cases = [l for l in label_lines if not is_special_case(l)]
     ret = excluding_special_cases
     return ret
 
