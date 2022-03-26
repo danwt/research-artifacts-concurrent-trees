@@ -1,4 +1,4 @@
-# thesis-models
+# TLA
 
 Contains TLA modelling working environment for thesis.
 

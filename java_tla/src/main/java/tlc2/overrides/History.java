@@ -2,20 +2,20 @@ package tlc2.overrides;
 
 import java.util.*;
 
-/**
+/*
  * Build a history and check that it is linearizable
- * <p>
+
  * By default, check against a Set ADT
  * Insert(k) - returns bool(k was absent and insert succeeded)
  * Erase(k) - returns bool(k was present and erase succeeded)
  * Get(k) - returns bool(k was present)
- * <p>
- * TODO: there is the matter of matching the true definition of linearizability. That is: for
+
+ * There is the matter of matching the true definition of linearizability. That is: for
  * histories where not every invocation has a response - can we extend the history with responses
  * such that the history is sequentially consistent?
- * Right now we just assume that the history is complete; meaning that every invocation has a
+ * We just assume that the history is complete; meaning that every invocation has a
  * response.
- * <p>
+ *
  * Algorithm:
  * Save the operation list with invocations and responses combined.
  * Test all permutations (sequential histories) for 2 things:

@@ -18,7 +18,7 @@ public class TreeGeneration {
     static class TreeRepr {
 
         // Map keys are 'addresses' in the TLA+ model
-        // NOTE: right now the address is equal to the key
+        // The address is actually equal to the key.
         Map<Integer, Integer> key = new HashMap<>();
         Map<Integer, Integer> val = new HashMap<>();
         Map<Integer, Integer> left = new HashMap<>();
@@ -163,8 +163,7 @@ public class TreeGeneration {
     }
 
     /**
-     * TODO: I have no idea if using a static like this is a thread safe approach
-     * I should get in touch with one of the TLC devs.
+     * TODO: I have no idea if using a static like this is a thread safe approach.
      */
     private static Value setOfInterestingAvlTreesCachedRet = null;
 

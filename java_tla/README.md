@@ -1,2 +1,3 @@
-# thesis-tla-library
-Contains Java and TLA code for the custom tla library required for my thesis models.
+# Java TLA Library
+
+Contains Java and TLA implementing custom TLC operators which are used to generate trees and check linearizability.
