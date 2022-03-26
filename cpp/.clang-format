@@ -1,0 +1,23 @@
+---
+BasedOnStyle: Microsoft
+AlignAfterOpenBracket: Align
+AlignConsecutiveMacros: 'true'
+AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
+AlignOperands: 'true'
+AlignTrailingComments: 'true'
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: 'false'
+AlwaysBreakTemplateDeclarations: 'Yes'
+BinPackArguments: 'false'
+BinPackParameters: 'false'
+BreakInheritanceList: AfterColon
+BreakStringLiterals: 'false'
+ColumnLimit: '100'
+KeepEmptyLinesAtTheStartOfBlocks: 'true'
+NamespaceIndentation: None
+ReflowComments: 'false'
+SortIncludes: 'true'
+SortUsingDeclarations: 'false'
+
+...

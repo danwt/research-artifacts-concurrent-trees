@@ -1,0 +1,123 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run main",
+      "type": "shell",
+      "command": "./build/src/main",
+    },
+    {
+      "label": "Run avl_sequential_chunked_recursive_map_based_rapid",
+      "type": "shell",
+      "command": "RC_PARAMS=\"max_success=4000\" ./build/src/algorithms/tests/avl_sequential_chunked_recursive_map_based_rapid",
+    },
+    {
+      "label": "Run avl_sequential_standard_rapid",
+      "type": "shell",
+      "command": "RC_PARAMS=\"max_success=1000\" ./build/src/algorithms/tests/avl_sequential_standard_rapid",
+    },
+    {
+      "label": "Configure Debug",
+      "type": "shell",
+      "group": "build",
+      "command": "cmake",
+      "args": [
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCLANG_TIDY=OFF",
+        "-DTESTS=ON",
+        "-DCOVERAGE=ON",
+        "-DCOVERAGE_LCOV=ON",
+        "-DCOVERAGE_TEXT=OFF",
+        "-DCOVERAGE_HTML=OFF",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+        "-GNinja",
+        "-j13",
+        "-S",
+        ".",
+        "-B",
+        "build",
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Configure Optimized",
+      "type": "shell",
+      "group": "build",
+      "command": "cmake",
+      "args": [
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCLANG_TIDY=OFF",
+        "-DTESTS=OFF",
+        "-DCOVERAGE=OFF",
+        "-DCOVERAGE_LCOV=OFF",
+        "-DCOVERAGE_TEXT=OFF",
+        "-DCOVERAGE_HTML=OFF",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=0",
+        "-GNinja",
+        "-j13",
+        "-S",
+        ".",
+        "-B",
+        "build"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "cmake --build build",
+      "args": [],
+      "dependsOn": [
+        "Configure"
+      ],
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+          "absolute"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "label": "Clean (delete dir)",
+      "type": "shell",
+      "group": "none",
+      "command": "rm -rf build",
+    },
+    {
+      "label": "Run all test",
+      "type": "shell",
+      "group": "test",
+      "command": "cmake --build build --target test",
+      "dependsOn": "Build"
+    },
+    {
+      "label": "Run all tests with code coverage",
+      "type": "shell",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "command": "cmake --build build --target coverage",
+      "dependsOn": "Build"
+    },
+    {
+      "label": "Fix format",
+      "type": "shell",
+      "group": "none",
+      "command": "scripts_bash/check_format.sh --fix",
+      "problemMatcher": []
+    },
+  ]
+}

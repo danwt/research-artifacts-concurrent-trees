@@ -1,0 +1,34 @@
+{
+  "editor.formatOnSave": true,
+  "clangd.arguments": [
+    "--compile-commands-dir=build",
+    "-log=verbose"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "typescript.tsc.autoDetect": "off",
+  "npm.autoDetect": "off",
+  "git.ignoreLimitWarning": true,
+  "coverage-gutters.coverageFileNames": [
+    "build/coverage/lcov.info"
+  ],
+  "coverage-gutters.coverageReportFileName": "build/coverage/html/index.html",
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "doxdocgen.generic.customTags": [
+    "@pre",
+    "@post",
+    "@remark"
+  ],
+  "doxdocgen.generic.order": [
+    "brief",
+    "custom",
+  ],
+  "cSpell.diagnosticLevel": "Hint"
+}
