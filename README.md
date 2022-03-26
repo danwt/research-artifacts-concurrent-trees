@@ -9,3 +9,7 @@ All development is intended to be done in VSCode or Intellij. VSCode is used for
 Issues should have a reference to a specific commit, if reference some code. This allows the latest commit to always contain relevant live code only.
 
 ## Subdirectories
+
+### third_party
+
+Backup copies of third party concurrent tree code written in a range of languages including C, Java, and C++.
