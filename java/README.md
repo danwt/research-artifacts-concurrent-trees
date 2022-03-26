@@ -1,8 +1,15 @@
 # Java Implementations
 
+## Development
+
+Create a new Intellij project from this directory and ensure the Java version being used is `16`. Ensure Intellij is configured to build and run and run tests using `IntelliJ IDEA`:
+
+![preferences](./preferences.png)
+
 ## Algorithms
 
 ### AvlChunked
+
 1. MRSWCAvlIterativeFullRetryDechunked
 1. MRSWCAvlIterativeFullRetryMapBased
 1. MRSWCAvlRecursiveMapBased
@@ -26,4 +33,3 @@
 ### Drachsler
 
 1. DrachslerLogicalOrdering // The internal Avl due to Drachsler
-
