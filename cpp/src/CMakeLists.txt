@@ -7,8 +7,8 @@ add_executable(main main_main.cpp)
 target_link_libraries(main Main)
 target_include_directories(Main SYSTEM PUBLIC ../lib)
 
-# add_project_warnings(Main)
+add_project_warnings(Main)
 
 add_subdirectory(algorithms)
 add_subdirectory(tests)
-# add_subdirectory(benchmark)
+add_subdirectory(benchmark)

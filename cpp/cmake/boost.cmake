@@ -1,4 +1,3 @@
-
 find_package(Boost 1.71 REQUIRED COMPONENTS system thread)
 
 message(STATUS "Boost version: ${Boost_VERSION}")

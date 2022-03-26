@@ -1,5 +1,7 @@
 set(RC_ENABLE_GTEST TRUE)
+
 add_subdirectory("lib/rapidcheck")
+
 function(add_rapidcheck EXE_OR_LIB)
     target_compile_options(rapidcheck PUBLIC "-Wno-sign-conversion")
     target_compile_options(rapidcheck PUBLIC "-Wno-implicit-int-float-conversion")

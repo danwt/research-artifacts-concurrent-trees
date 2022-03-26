@@ -19,5 +19,4 @@ NamespaceIndentation: None
 ReflowComments: 'false'
 SortIncludes: 'true'
 SortUsingDeclarations: 'false'
-
 ...

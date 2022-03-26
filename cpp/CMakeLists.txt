@@ -23,4 +23,4 @@ include(cmake/doxygen.cmake)
 include(cmake/rapidcheck.cmake)
 
 add_subdirectory(src)
-# add_subdirectory(lib/benchmark)
+add_subdirectory(lib/benchmark)

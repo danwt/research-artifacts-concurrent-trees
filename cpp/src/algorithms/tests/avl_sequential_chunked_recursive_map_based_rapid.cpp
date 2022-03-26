@@ -21,8 +21,7 @@ auto with_erases() -> void {
 }
 
 int main() {
-  log_to_file("avl_sequential_chunked_recursive_map_based_rapid.txt");
-  // without_erases();
+  log_to_file("avl_sequential_chunked_recursive_map_based_rapid.log");
   with_erases();
   return 0;
 }

@@ -69,17 +69,12 @@ RUN set -eux; \
     echo "Set disable_coredump false" >> /etc/sudo.conf; \
     fi
 
-# Additional libraries -----------------------------
-
-
 RUN set -eux; \
-    echo "Installing spdlog, protobuf, boost, proto, doxygen and other utils"; \
+    echo "Installing spdlog, boost, doxygen and other utils"; \
     export DEBIAN_FRONTEND=noninteractive; \
     apt-get -y install --no-install-recommends \
     libspdlog-dev \
     libboost-all-dev \
-    libprotobuf-dev \ 
-    protobuf-compiler \
     doxygen \ 
     ccache \
     cppcheck \

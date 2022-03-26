@@ -63,7 +63,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Build",
+      "label": "cmake --build build",
       "type": "shell",
       "group": {
         "kind": "build",
@@ -90,20 +90,20 @@
       }
     },
     {
-      "label": "Clean (delete dir)",
+      "label": "rm -rf build",
       "type": "shell",
       "group": "none",
       "command": "rm -rf build",
     },
     {
-      "label": "Run all test",
+      "label": "cmake --build build --target test",
       "type": "shell",
       "group": "test",
       "command": "cmake --build build --target test",
       "dependsOn": "Build"
     },
     {
-      "label": "Run all tests with code coverage",
+      "label": "cmake --build build --target coverage",
       "type": "shell",
       "group": {
         "kind": "test",
@@ -113,7 +113,7 @@
       "dependsOn": "Build"
     },
     {
-      "label": "Fix format",
+      "label": "scripts_bash/check_format.sh --fix",
       "type": "shell",
       "group": "none",
       "command": "scripts_bash/check_format.sh --fix",

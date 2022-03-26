@@ -1,4 +1,3 @@
-
 find_package(spdlog REQUIRED)
 
 message(STATUS "Using spdlog")

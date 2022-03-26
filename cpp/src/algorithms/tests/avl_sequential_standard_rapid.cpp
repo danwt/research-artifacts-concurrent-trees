@@ -21,7 +21,7 @@ auto with_erases() -> void {
 }
 
 int main() {
-  log_to_file("avl_sequential_standard_rapid.txt");
+  log_to_file("avl_sequential_standard_rapid.log");
   without_erases();
   with_erases();
   return 0;

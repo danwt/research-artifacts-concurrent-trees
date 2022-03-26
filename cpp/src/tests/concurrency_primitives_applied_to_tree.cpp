@@ -50,13 +50,3 @@ TEST(AtomicTreeBasics, zero_initialized) {
   assert(n.chunk == nullptr);
   assert(c.root == nullptr);
 }
-
-TEST(AtomicTreeBasics, navigate_pointers_atomically) {
-  auto n = std::make_shared<Node>();
-  auto left = std::make_shared<Node>();
-
-  /*
-  TODO: I'm not sure what I was doing, trying to figure out how to handle
-  reference counting I suppose
-  */
-}

@@ -131,10 +131,6 @@ private:
 
   void shift(ChunkMap &from, ChunkMap &to, std::function<bool(K)> pred) const {
     assert(root != nullptr);
-    /*
-      TODO: can be optimized because always only need to move start or end of
-      chunk
-    */
 
     for (auto it = from.cbegin(), next_it = it; it != from.cend();
          it = next_it) {
@@ -236,7 +232,6 @@ Chunk *ChunkedAvl::create_chunk(int id) {
 }
 
 void ChunkedAvl::destroy_chunk(Chunk *chunk) {
-  // HACK:
   for (int i{0}; i < static_cast<int>(chunks.size()); ++i) {
     if (chunks[i]->id == chunk->id) {
       chunks.erase(chunks.begin() + i);
@@ -246,7 +241,6 @@ void ChunkedAvl::destroy_chunk(Chunk *chunk) {
 }
 
 void ChunkedAvl::destroy_non_leaf(Node *node) {
-  // HACK:
   assert(!node->is_leaf());
   for (int i{0}; i < static_cast<int>(inner_nodes.size()); ++i) {
     if (inner_nodes[i].get() == node) {
@@ -419,13 +413,6 @@ void ChunkedAvl::rebalance(Node *curr) {
 
   assert(curr == &root_holder);
 }
-
-/*
-TODO:
-Something to think about:
-Trying to insert an element that's already present can lead to additional chunk
-splits.
-*/
 
 void ChunkedAvl::insert_impl(K k, V v, Node *curr, Chunk *c) {
 

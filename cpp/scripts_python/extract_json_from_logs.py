@@ -2,7 +2,7 @@ import os
 
 """
 A script to parse JSON debugging graphs from logs/ files.
-Right now the script automatically pushes the json to the visualizer.
+The script automatically pushes the json to the visualizer.
 """
 
 log_directory = "logs/"

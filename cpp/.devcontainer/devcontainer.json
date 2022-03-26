@@ -1,5 +1,5 @@
 {
-	"name": "MScThesisCpp",
+	"name": "cpp_concurrent_trees",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
@@ -22,7 +22,6 @@
 		"cschlosser.doxdocgen",
 		"vadimcn.vscode-lldb",
 		"twxs.cmake",
-		
 		"streetsidesoftware.code-spell-checker",
 		"christian-kohler.path-intellisense",
 		"wayou.vscode-todo-highlight",
@@ -46,6 +45,6 @@
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"containerEnv": {
-		"DISPLAY":"unix:0"
+		"DISPLAY": "unix:0"
 	}
 }
